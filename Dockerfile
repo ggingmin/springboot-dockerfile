@@ -12,7 +12,7 @@ RUN ./gradlew bootjar
 
 
 # jar 실행
-FROM eclipse-temurin:11 as runtime
+FROM eclipse-temurin:11-jre as runtime
 
 RUN addgroup --system --gid 1000 worker
 RUN adduser --system --uid 1000 --ingroup worker --disabled-password worker
